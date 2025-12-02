@@ -1,0 +1,17 @@
+.btn{
+    background-color: rgb(93, 93, 240);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.flex{
+    display: flex;
+}
+
+.between{
+    justify-content: space-evenly;
+}
+main{
+    margin: 50px 5%;
+}
