@@ -1,18 +1,28 @@
 import './AppMain.css';
 import { languages } from '../assets/languages';
-export default function AppMain(){
-    return(
+import Button from './Button.jsx';
+export default function AppMain() {
+
+    function click(){
+
+
+        return
+    }
+
+    return (
         <>
             <main>
 
-                <div className='flex between'>
-                {languages.map((language, i) =>(
-                    
-                        <div key={i}>
-                            <span className='btn'>{language.title}</span>
-                        </div>
-                    
-                ))} 
+                <div>
+                    {/* lista */}
+                    <ul className='flex between'>
+                        {languages.map((language, i) => (
+                            <li key={i}  >
+                                <Button text={`${language.title}`}/>
+                            </li>
+                        ))}
+                    </ul>
+                    {/* fine lista */}
                 </div>
             </main>
         </>
