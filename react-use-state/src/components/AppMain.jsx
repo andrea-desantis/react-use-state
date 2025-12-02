@@ -1,29 +1,38 @@
 import './AppMain.css';
 import { languages } from '../assets/languages';
 import Button from './Button.jsx';
+import TestoAlClick from './TestoAlClick.jsx'
+import { useState } from 'react';
+
 export default function AppMain() {
 
-    function click(){
-
-
-        return
-    }
+    const [testo, setTesto] = useState(null);
 
     return (
         <>
             <main>
 
-                <div>
-                    {/* lista */}
-                    <ul className='flex between'>
-                        {languages.map((language, i) => (
-                            <li key={i}  >
-                                <Button text={`${language.title}`}/>
-                            </li>
-                        ))}
-                    </ul>
-                    {/* fine lista */}
-                </div>
+
+                {/* lista */}
+                <ul className='flex between'>
+                    {languages.map((language) => (
+                        <li key={language.id}  >
+                            <Button
+                                text={`${language.title}`}
+                                onClick={() => setTesto(language)}
+                                active={testo && testo.id === language.id}
+
+                            />
+                        </li>
+                    ))}
+                </ul>
+                {/* fine lista */}
+
+
+                <TestoAlClick 
+                    language={testo}
+                />
+
             </main>
         </>
     );

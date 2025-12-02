@@ -5,10 +5,19 @@
     border-radius: 10px;
 }
 
+.btn.active{
+    background-color: rgb(238, 240, 93);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .flex{
     display: flex;
 }
-
+.column{
+    flex-direction: column;
+}
 .between{
     justify-content: space-evenly;
 }
